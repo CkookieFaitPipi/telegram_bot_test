@@ -1,12 +1,11 @@
-import logging
+# import logging
 from telegram.ext import Updater, MessageHandler, Filters
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.DEBUG
-)
+#logging.basicConfig(
+#    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.DEBUG])
 
-logger = logging.getLogger(__name__)
+#logger = logging.getLogger(__name__)
 
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
